@@ -98,11 +98,11 @@ export default function InteractiveMap() {
                         {/* High Tech Grid Background */}
                         <div className="absolute inset-0 bg-[url('/blueprint-grid.svg')] opacity-10 bg-center" />
 
-                        {/* The Actual NY Aerial Map */}
+                        {/* The Actual NY Aerial Map - Realistic Top-Down Map view */}
                         <div
-                            className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?q=80&w=2670&auto=format&fit=crop')] bg-cover bg-center opacity-40 scale-110 transform transition-transform duration-[20s] group-hover:scale-[1.3] mix-blend-luminosity"
+                            className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=2674&auto=format&fit=crop')] bg-cover bg-center opacity-70 scale-110 transform transition-transform duration-[20s] group-hover:scale-[1.3] mix-blend-screen"
                         />
-                        <div className="absolute inset-0 bg-red-950/40 mix-blend-color-burn" />
+                        <div className="absolute inset-0 bg-red-950/60 mix-blend-multiply pointer-events-none" />
 
                         {/* Interactive Pins - Tied to Hover State */}
                         <AnimatePresence>
