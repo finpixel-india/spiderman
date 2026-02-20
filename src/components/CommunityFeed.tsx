@@ -35,6 +35,48 @@ const posts = [
         likes: "50.1K",
         time: "2d ago",
         verified: true,
+    },
+    {
+        id: 5,
+        author: "Harry O.",
+        handle: "@harry_osborn",
+        content: "Oscorp grid saw a major spike during that last fight, but it looks like the webslinger handled it without catastrophic failure. Impressive.",
+        likes: "3.2K",
+        time: "3d ago",
+    },
+    {
+        id: 6,
+        author: "Daily Bugle Alerts",
+        handle: "@BugleAlerts",
+        content: "MENACE DESTROYS HISTORIC CLOCK TOWER! FULL STORY AT 11!",
+        likes: "102K",
+        time: "3d ago",
+        verified: true,
+    },
+    {
+        id: 7,
+        author: "Cindy Moon",
+        handle: "@cindy_spins",
+        content: "Saw a red and blue blur zip across the financial district. Anyone else catch that? So fast!",
+        likes: "5.5K",
+        time: "4d ago",
+    },
+    {
+        id: 8,
+        author: "Yuri Watanabe",
+        handle: "@CaptainWatanabe",
+        content: "To whoever tied up the Fisk syndicate crew outside the precinct... the paperwork is a nightmare, but thanks.",
+        likes: "28.9K",
+        time: "5d ago",
+        verified: true,
+    },
+    {
+        id: 9,
+        author: "Ned L.",
+        handle: "@guy_in_the_chair",
+        content: "Spider-Man is definitely the coolest hero. Not that I know him personally. But if I did, I'd say he's awesome.",
+        likes: "800",
+        time: "1w ago",
     }
 ];
 

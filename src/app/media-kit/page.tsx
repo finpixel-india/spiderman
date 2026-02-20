@@ -7,13 +7,14 @@ export const metadata = {
 };
 
 // Dummy image placeholders since we don't have actual Spidey action shots
+// Mock images with real Unsplash superhero/tech/new york URLs
 const images = [
-    { id: 1, title: "Web-Swinging Mid-town", size: "4.2 MB" },
-    { id: 2, title: "Doc Ock Encounter", size: "5.1 MB" },
-    { id: 3, title: "Sunset over Brooklyn Bridge", size: "3.8 MB" },
-    { id: 4, title: "Hero Landing", size: "6.2 MB" },
-    { id: 5, title: "Saving MTA Bus", size: "4.5 MB" },
-    { id: 6, title: "Friendly Neighborhood Wave", size: "3.1 MB" }
+    { id: 1, title: "Web-Swinging Mid-town", size: "4.2 MB", url: "https://images.unsplash.com/photo-1608889175123-8ee362201f81?q=80&w=800&auto=format&fit=crop" },
+    { id: 2, title: "Doc Ock Encounter", size: "5.1 MB", url: "https://images.unsplash.com/photo-1534809027769-621741407efa?q=80&w=800&auto=format&fit=crop" },
+    { id: 3, title: "Sunset over Brooklyn Bridge", size: "3.8 MB", url: "https://images.unsplash.com/photo-1635805737707-575885ab0820?q=80&w=800&auto=format&fit=crop" },
+    { id: 4, title: "Hero Landing", size: "6.2 MB", url: "https://images.unsplash.com/photo-1620336655055-088d06e36bf0?q=80&w=800&auto=format&fit=crop" },
+    { id: 5, title: "Saving MTA Bus", size: "4.5 MB", url: "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?q=80&w=800&auto=format&fit=crop" },
+    { id: 6, title: "Friendly Neighborhood Gear", size: "3.1 MB", url: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop" }
 ];
 
 export default function MediaKitPage() {
@@ -43,15 +44,16 @@ export default function MediaKitPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {images.map((img) => (
-                        <div key={img.id} className="group relative rounded-xl overflow-hidden glass border border-gray-800 hover:border-blue-500/50 transition-colors aspect-video flex flex-col justify-end">
+                        <div key={img.id} className="group relative rounded-xl overflow-hidden glass border border-gray-800 hover:border-red-500/50 transition-colors aspect-video flex flex-col justify-end">
 
-                            {/* Fake image placeholder background */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-gray-900 to-black flex items-center justify-center -z-10 group-hover:scale-105 transition-transform duration-500">
-                                <Camera className="text-gray-800" size={64} />
-                            </div>
+                            {/* Unsplash specific spider-man / superhero / tech related pictures */}
+                            <div
+                                className="absolute inset-0 bg-cover bg-center -z-10 group-hover:scale-105 transition-transform duration-500"
+                                style={{ backgroundImage: `url(${img.url})` }}
+                            />
 
                             {/* Gradient overlay for text */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent opacity-90" />
 
                             <div className="p-6 relative z-10 flex justify-between items-end">
                                 <div>
@@ -59,7 +61,7 @@ export default function MediaKitPage() {
                                     <p className="text-gray-400 text-sm font-sans">RAW / {img.size}</p>
                                 </div>
 
-                                <button className="w-10 h-10 rounded-full bg-blue-600 hover:bg-blue-500 flex items-center justify-center text-white transition-colors group-hover:scale-110">
+                                <button className="w-10 h-10 rounded-full bg-red-600 hover:bg-red-500 flex items-center justify-center text-white transition-colors group-hover:scale-110">
                                     <Download size={18} />
                                 </button>
                             </div>
