@@ -107,6 +107,7 @@ export default function InteractiveMap() {
                         {/* Interactive Pins - Tied to Hover State */}
                         <AnimatePresence>
                             <motion.div
+                                key="pin-1"
                                 initial={{ y: -20, opacity: 0 }}
                                 animate={{ y: 0, opacity: activeZone === 1 || activeZone === null ? 1 : 0.3, scale: activeZone === 1 ? 1.5 : 1 }}
                                 transition={{ delay: 1, type: "spring" }}
@@ -129,6 +130,7 @@ export default function InteractiveMap() {
                             </motion.div>
 
                             <motion.div
+                                key="pin-2"
                                 initial={{ y: -20, opacity: 0 }}
                                 animate={{ y: 0, opacity: activeZone === 2 || activeZone === null ? 1 : 0.3, scale: activeZone === 2 ? 1.5 : 1 }}
                                 transition={{ delay: 1.2, type: "spring" }}
