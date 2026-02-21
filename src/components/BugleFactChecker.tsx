@@ -43,7 +43,7 @@ export default function BugleFactChecker() {
                     </h2>
                 </div>
 
-                <div className="w-full relative min-h-[300px] flex items-center justify-center">
+                <div className="w-full relative flex items-center justify-center">
                     <AnimatePresence mode="wait">
                         <motion.div
                             key={currentIndex}
@@ -51,7 +51,7 @@ export default function BugleFactChecker() {
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: -50 }}
                             transition={{ duration: 0.4 }}
-                            className="w-full glass border border-red-500/30 rounded-2xl p-8 md:p-12 absolute"
+                            className="w-full glass border border-red-500/30 rounded-2xl p-6 md:p-12"
                         >
 
                             <div className="flex flex-col md:flex-row gap-8 items-start">
